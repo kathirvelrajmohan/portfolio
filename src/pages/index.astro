@@ -12,47 +12,66 @@ const last_posts = posts.slice(0, 3);
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-5xl font-bold">I'm Kathirvel Rajmohan</div>
+    <div class="text-3xl py-3 font-bold">Data Engineer</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        Data Engineer with around 2 years of experience writing complex SQL and building PySpark data pipelines
+        in Databricks — including cluster configuration, job orchestration, and AWS S3 integration — alongside
+        enterprise application development. Databricks Certified Data Engineer Associate, with additional
+        hands-on experience in Delta Lake, data quality frameworks, and Medallion architecture through an
+        independent end-to-end ETL project.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+      <a class="btn" href="mailto:kathirvelrajmohan9498@gmail.com" target="_blank"> Let's connect!</a>
     </div>
   </div>
 
+    <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="mb-10 grid gap-4">
+    <div>
+      <h3 class="font-semibold mb-1">B.E. in Computer Science and Engineering</h3>
+      <span class="font-light text-sm">IFET College of Engineering, Villupuram, Tamil Nadu — Sep 2021 to Apr 2024 — CGPA: 8.4/10</span>
+    </div>
+    <div>
+      <h3 class="font-semibold mb-1">Diploma in Electrical and Electronics Engineering</h3>
+      <span class="font-light text-sm">Seshasayee Institute of Technology — July 2018 to Jun 2021 — CGPA: 8.2/10</span>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://credentials.databricks.com/9b6fb868-bfa2-4047-bd6e-2c9e33150037" target="_blank" class="font-semibold">Databricks Certified Data Engineer Associate</a>
+      <span class="font-light text-sm block">2026 — Validates expertise in lakehouse architecture, Delta Lake, ETL pipelines, Apache Spark, and data engineering best practices.</span>
+    </li>
+  </ul>
+
+  
   <div>
     <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="Sales ETL Pipeline"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="End-to-end data engineering pipeline on Databricks using Medallion Architecture (Bronze/Silver/Gold) on a retail sales dataset. Includes Delta Lake tables with ACID transactions, PySpark transformations, a 53-check automated data quality framework, and a star schema data model."
     url="#"
-    badge="NEW"
+    badge="ONGOING"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
+    title="College Grievance Management System"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="A web-based grievance management system for educational institutions, built with Django, PostgreSQL, HTML/CSS/JS. Lets students, staff, and faculty register and track complaints online with a resolution workflow through the grievance redressal cell."
+    url="https://github.com/kathirvelrajmohan/College-Grievance-Management-System"
     badge="FOSS"
   />
 
