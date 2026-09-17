@@ -1,17 +1,30 @@
-<div
-  class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
->
-  <div class="navbar">
+---
+const { sideBarActiveItemID } = Astro.props;
+---
+
+<header class="sticky top-0 z-30 w-full bg-base-100 bg-opacity-90 backdrop-blur shadow-sm">
+  <div class="navbar max-w-[1100px] mx-auto px-4">
     <div class="navbar-start">
-      <label for="my-drawer" class="btn btn-square btn-ghost">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"
-          ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
+      <label for="my-drawer" class="btn btn-square btn-ghost lg:hidden" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </label>
+      <a class="btn btn-ghost normal-case text-xl font-bold" href="/">Kathirvel Rajmohan</a>
     </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl" href="/">Kathirvel Rajmohan</a>
+    <div class="navbar-end hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="/" id="nav-home">Home</a></li>
+        <li><a href="/projects" id="nav-projects">Projects</a></li>
+        <li><a href="/blog/" id="nav-blog">Blog</a></li>
+        <li><a href="/resume.pdf" download onclick="return confirm('Download my Resume (PDF)?');">Resume</a></li>
+        <li><a href="/coverletter.pdf" download onclick="return confirm('Download my Cover Letter (PDF)?');">Cover Letter</a></li>
+        <li><a href="mailto:kathirvelrajmohan9498@gmail.com">Contact</a></li>
+      </ul>
     </div>
-    <div class="navbar-end"></div>
   </div>
-</div>
+</header>
+
+<script define:vars={{ sideBarActiveItemID }}>
+  const map = { home: "nav-home", projects: "nav-projects", blog: "nav-blog" };
+  const id = map[sideBarActiveItemID];
+  if (id) document.getElementById(id)?.classList.add("font-bold", "underline");
+</script>
